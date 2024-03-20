@@ -12,16 +12,16 @@
     //SMTP::DEBUG_CLIENT = client messages
     //SMTP::DEBUG_SERVER = client and server messages
     $mail->SMTPDebug = SMTP::DEBUG_OFF;
-    $mail->Host = 'smtp.naver.com';
+    $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->SMTPSecure = 'ssl';
     $mail->SMTPAuth = true;
     $mail->CharSet = 'UTF-8'; 
-    $mail->Username = 'lsrljm8011';
-    $mail->Password = 'tpfls1998';
-    $mail->setFrom('lsrljm8011@naver.com', 'PHP Class');
-    $mail->addReplyTo($contactFrom, '안녕하세요!');
-    $mail->addAddress('lsrljm98@gmail.com', 'John Doe');
+    $mail->Username = 'lsrljm98@gmail.com';
+    $mail->Password = 'ujcz cnxl ztsj cmuj';
+    $mail->setFrom($contactFrom, 'Sender');
+    $mail->addReplyTo($contactFrom, '보낸사람');
+    $mail->addAddress('lsrljm98@gmail.com', 'Receiver');
     $mail->Subject = $contactSubject;
     //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
     $mail->msgHTML($contactContent);
